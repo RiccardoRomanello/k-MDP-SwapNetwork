@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdp-sn"
+version = "1.0.0"
+description = "SWAP networks with minimum 1- and 2-dominating paths"
+requires-python = ">=3.10"
+dependencies = ["networkx>=3.2,<3.8", "clingo==5.8.2", "numpy>=1.26"]
+
+[project.scripts]
+mdp-sn = "mdp_sn.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "python"}
+
+[tool.setuptools.packages.find]
+where = ["python"]
